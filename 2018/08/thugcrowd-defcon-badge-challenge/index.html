@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Basic Metas -->
+	<meta charset="utf-8">
+	<title>ThugCrowd DEFCON Badge Challenge | shambo.li</title>
+	<meta name="description" content="Thugcrowd DEFCON Badge Challenge Link, Mirror: This was one of my first introductions to non-standard CTF-y solvable challenges. At first glance, challenge has a few things which seem to be noteworthy: - BEGIN PRIVATE KEY seems indicative of a cryptographic key. BEGIN …">
+	<meta name="author" content="n">
+	<link rel="author" href=""/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<!-- Twitter Cards and Open Graph -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:creator" content="@shamb0li">
+	<meta name="twitter:domain" content="shambo.li">
+	<meta name="twitter:site" content="@shamb0li">
+	<meta property="og:title" content="ThugCrowd DEFCON Badge Challenge">
+	<meta property="og:description" content="Thugcrowd DEFCON Badge Challenge Link, Mirror: This was one of my first introductions to non-standard CTF-y solvable challenges. At first glance, challenge has a few things which seem to be noteworthy: - BEGIN PRIVATE KEY seems indicative of a cryptographic key. BEGIN …">
+	<meta property="og:image" content="../../../images/icons/avatar.png">
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="../../../2018/08/thugcrowd-defcon-badge-challenge/">
+
+	<!-- Stylesheets and Web Fonts -->
+	<link href="/theme/style.min.css?2af86252" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.x-git.min.js"></script>
+    <script src="/includes/js/lightbox.js"></script>
+    <link href="/includes/css/lightbox.css" rel="stylesheet" />
+
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/images/icons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon-180x180.png">
+
+	<link rel="icon" type="image/png" href="/images/icons/favicon-16x16.png" sizes="16x16">
+	<link rel="icon" type="image/png" href="/images/icons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/images/icons/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="/images/icons/favicon-160x160.png" sizes="160x160">
+	<link rel="icon" type="image/png" href="/images/icons/favicon-196x196.png" sizes="196x196">
+
+	<meta name="theme-color" content="">
+
+	<meta name="msapplication-TileColor" content="">
+	<meta name="msapplication-TileImage" content="/images/icons/mstile-144x144.png">
+	<meta name="msapplication-square70x70logo" content="/images/icons/mstile-small.png">
+	<meta name="msapplication-square150x150logo" content="/images/icons/mstile-medium.png">
+	<meta name="msapplication-wide310x150logo" content="/images/icons/mstile-wide.png">
+	<meta name="msapplication-square310x310logo" content="/images/icons/mstile-large.png">
+
+	<!--[if lt IE 9]>
+	<script src="/theme/js/html5shiv.min.js"></script>
+	<script src="/theme/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<div class="container">
+		<aside>
+			<a href="/"><img id="avatar" alt="Site Avatar" src="/images/icons/avatar.png"></a>
+			<div id="name"><a href="/">shambo.li</a></div>
+			<div id="bio">just a person who does some things online<hr>
+occasionally posts writeups, occasionally participates in ctfs, occasionally plays video games
+</div>
+
+			<div id="sidebar-links">
+				<a href="/about-me/">About</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/archive/">Archive</a>
+			</div>
+
+			<div id="social">
+				<a href="mailto:n@shambo.li" title="send me an email" class="icon fa fa-envelope-o"></a>
+				<a href="http://twitter.com/shamb0li" title="follow me on twitter" class="icon fa fa-twitter"></a>
+				<a href="http://github.com/shamboli" title="shamboli github" class="icon fa fa-github"></a>
+			</div>
+
+			<hr id="sidebar-divider">
+		</aside>
+
+		<article>
+	<h1 class="title"><a href="/2018/08/thugcrowd-defcon-badge-challenge/" title="Permalink to ThugCrowd DEFCON Badge Challenge">ThugCrowd <span class="caps">DEFCON</span> Badge&nbsp;Challenge</a></h1>
+	<time class="date" datetime="2018-08-10 18:00:00-05:00">Fri 10 August 2018</time>
+	<div class="content">
+		<h2><a href="https://thugcrowd.com/badge.html">Thugcrowd <span class="caps">DEFCON</span> Badge Challenge Link</a>, <a href="http://archive.is/xrfD6">Mirror</a>:</h2>
+<p>This was one of my first introductions to non-standard <span class="caps">CTF</span>-y solvable challenges. At first glance, challenge has a few things which seem to be noteworthy: 
+- <code>BEGIN PRIVATE KEY</code> seems indicative of a cryptographic key. <code>BEGIN PRIVATE KEY</code> is indicative of the <span class="caps">PKCS</span>#8 format, which, in this format appears to be unencrypted (since it lacks the <code>ENCRYPTED</code> phrase in the header). 
+- The body of the key is not base64 encoded as we would expect, instead, it appears to be in hexadecimal. 
+- The skull resembles the Punisher logo, this might be important.
+- There are two <span class="caps">MD5</span> sums near the bottom, and a&nbsp;binary. </p>
+<p>My first step was to download the binary, <code>skull</code>, and run md5sum on it to see if the value&nbsp;matched:</p>
+<div class="codehilite"><pre><span></span>user@box:/mnt/a/thugcrowd_skull_challenge$ 
+md5sum skull
+7ffb9fbb97af9533f0ed771b3856d7a8  skull
+</pre></div>
+
+
+<p>This file matches the checksum on the website, which is a good start. I tried doing the same with the &#8220;key&#8221;, and ended up spending way too much time trying to format the file to get a match on the checksum listed on the page. What I ended up doing was copying the contents of the &#8220;key&#8221; into HxD, and saving that as a binary:
+<a href="/includes/static/thugcrowd_badge/1-hxd-1.jpg" data-lightbox="1-hxd-1" data-title="1-hxd.jpg">
+    <img src="/includes/thumbs/thugcrowd_badge/1-hxd-1.jpg" title="hxd skull key" />
+</a></p>
+<div class="codehilite"><pre><span></span>user@box:/mnt/a/thugcrowd_skull_challenge$ md5sum key 
+34d00b96da65131a759ebe54d42d3136  key
+</pre></div>
+
+
+<p>I ran <code>binwalk</code> on both binaries, which resulted in the&nbsp;following: </p>
+<div class="codehilite"><pre><span></span>user@box:/mnt/a/thugcrowd_skull_challenge$ binwalk key                                                            
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+
+user@box:/mnt/a/thugcrowd_skull_challenge$ binwalk skull
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             ELF, 64-bit LSB executable, AMD x86-64, version 1 (GNU/Linux)
+216           0xD8            ELF, 64-bit LSB processor-specific, (GNU/Linux)
+325235        0x4F673         Copyright string: &quot;Copyright (C) 1996-2013 the UPX Team. All Rights Reserved. $&quot;
+</pre></div>
+
+
+<p>Running the <code>skull</code> binary shows&nbsp;us: </p>
+<div class="codehilite"><pre><span></span>ptl@kali:~/tc_badge$ ./skull 
+This message requires that you supply a key to decrypt
+</pre></div>
+
+
+<p>At the time, I wasn&#8217;t really sure what to do (I forgot about the <code>key</code>), so I decided to try my hand at a little debugging to see if I could get anywhere. I used <code>gdb</code>, the <span class="caps">GNU</span>&nbsp;Debugger. </p>
+<div class="codehilite"><pre><span></span>ptl@kali:~/tc_badge$ gdb -f ./skull 
+GNU gdb <span class="o">(</span>Debian <span class="m">8</span>.2.1-2<span class="o">)</span> <span class="m">8</span>.2.1
+Reading symbols from ./skull...<span class="o">(</span>no debugging symbols found<span class="o">)</span>...done.
+<span class="o">(</span>gdb<span class="o">)</span> r
+Starting program: /home/ptl/tc_badge/skull 
+The gates of heaven remain closed
+
+Program terminated with signal SIGKILL, Killed.
+The program no longer exists.
+</pre></div>
+
+
+<p>This didn&#8217;t prove to be much help, but the message <code>The gates of heaven remain closed</code> seemed like something that wasn&#8217;t part of gdb. Searching for this string&nbsp;online:</p>
+<ul>
+<li><a href="https://github.com/elfmaster/sherlocked/blob/master/stub.c">SherLocked</a></li>
+<li><a href="https://nostarch.com/gtfo">PoC || <span class="caps">GTFO</span> 0x06 - Davinci Seal by Ryan&nbsp;O’Neill</a> </li>
+</ul>
+<p>Without going too deep down the path, at this point I decided that it was probably better to try to not find a way around the way the challenge was meant to be solved, so back to the skull key. I ran the <code>strings</code> command on the binary I created from the hex dump on the website - the binary was expectedly very small, so it seemed like a decent&nbsp;option:</p>
+<div class="codehilite"><pre><span></span>ptl@kali:~/tc_badge$ strings key 
+   B8012 4CD15 B8030 0CD10 FA0F0 <span class="m">1</span> <span class="m">163</span>      <span class="m">7</span> 7C0             F20 C0668 3C801   <span class="m">0</span> F  <span class="m">2</span>  <span class="m">2</span> C       <span class="m">6</span>     <span class="m">6</span> <span class="m">8</span> <span class="m">3</span> C <span class="m">8</span>      <span class="m">0</span> <span class="m">1</span> <span class="m">0</span> F22C0     EA3D  <span class="m">7</span> C <span class="m">0</span>   <span class="m">8</span>     <span class="m">00000</span> <span class="m">0</span> <span class="m">000</span> <span class="m">00000</span> <span class="m">00</span> <span class="m">00</span> FFFF0 <span class="m">000</span> <span class="m">0</span>      09A C             F00 F   F FF <span class="m">00</span>   
+</pre></div>
+
+
+<p>Running file gives&nbsp;us:</p>
+<div class="codehilite"><pre><span></span>ptl@kali:~/tc_badge$ file key
+key: COM executable <span class="k">for</span> DOS
+</pre></div>
+
+
+<p>Having some experience with Windows, I knew that .<span class="caps">COM</span> files are part of the <span class="caps">DOS</span> boot process, one specific example being the command line interpreter, <code>COMMAND.COM</code>. 
+<a href="/includes/static/thugcrowd_badge/2-hxd-2.jpg" data-lightbox="2-hxd-2" data-title="2-hxd-2.jpg">
+    <img src="/includes/thumbs/thugcrowd_badge/2-hxd-2.jpg" title="hxd header" />
+</a>
+I went back to the file in HxD, and I looked up the first few bytes in <a href="https://www.garykessler.net/library/file_sigs.html">Gary Kessler&#8217;s file signature table</a> to see if I could verify this, but I wasn&#8217;t able to find it in the table. Searching for them instead led me to a better&nbsp;result: </p>
+<ul>
+<li><a href="http://3zanders.co.uk/2017/10/13/writing-a-bootloader/">Alex Parker&#8217;s Writing a Bootloader Part&nbsp;1</a></li>
+<li><a href="http://3zanders.co.uk/2017/10/16/writing-a-bootloader2/">Alex Parker&#8217;s Writing a Bootloader Part&nbsp;2</a> </li>
+<li><a href="http://3zanders.co.uk/2017/10/18/writing-a-bootloader3/">Alex Parker&#8217;s Writing a Bootloader Part&nbsp;3</a></li>
+<li><a href="http://3zanders.co.uk/2017/10/13/writing-a-bootloader/writingabootloader.pdf">Alex PArker&#8217;s Writing a Bootloader&nbsp;Presentation</a></li>
+</ul>
+<p><a href="https://en.wikibooks.org/wiki/X86_Assembly/Bootloaders">Wikibooks</a> has a great writeup about the makeup and technical details behind bootloaders - this article helped me understand more about what I was possibly dealing with, but I was a bit unsure as to if this was actually a bootloader, since it was missing the very clearly required/documented <code>0xAA55</code> signature designating a valid boot sector. I tried executing this file in multiple Windows <span class="caps">OS</span> (7, <span class="caps">DOSBOX</span>, FreeDOS), but I was unable to get it to run in any capacity. My next step was to attempt to boot it inside of VirtualBox as a floppy disk image.
+<a href="/includes/static/thugcrowd_badge/3-virtualbox-1.jpg" data-lightbox="3-virtualbox-1.jpg" data-title="3-virtualbox-1.jpg">
+    <img src="/includes/thumbs/thugcrowd_badge/3-virtualbox-1.jpg" title="virtualbox floppy" />
+</a></p>
+<p><a href="/includes/static/thugcrowd_badge/4-virtualbox-2.jpg" data-lightbox="4-virtualbox-2.jpg" data-title="4-virtualbox-2.jpg">
+    <img src="/includes/thumbs/thugcrowd_badge/4-virtualbox-2.jpg" title="virtualbox boot" />
+</a></p>
+<p>Once booting, we see something reminiscent of the result of the <code>strings</code> command we ran above. ThugCrowd has a thing for making awesome <span class="caps">ASCII</span> art, so looking at with a less technical interpretation might be a good idea (it does appear to be somewhat&nbsp;abstract): </p>
+<p><a href="/includes/static/thugcrowd_badge/5-key-1.jpg" data-lightbox="5-key-1.jpg" data-title="5-key-1.jpg">
+    <img src="/includes/thumbs/thugcrowd_badge/5-key-1.jpg" title="the key?" />
+</a></p>
+<p><a href="/includes/static/thugcrowd_badge/6-key-2.jpg" data-lightbox="6-key-2.jpg" data-title="6-key-2.jpg">
+    <img src="/includes/thumbs/thugcrowd_badge/6-key-2.jpg" title="the key..." />
+</a></p>
+<p><code>KEY IS SAKURA</code> is clearly the message. Maybe this is the key to decrypt the&nbsp;binary? </p>
+<div class="codehilite"><pre><span></span>ptl@kali:~/tc_badge$ ./skull SAKURA
+                                                                  ██           
+    ──────────────────────────────────────────────────────────── ▒██ ──────    
+   ████████ ███  ██ ███  ██  ██████  ██████ ███████ ███████  ██  ▒██ ███████   
+  ▒▒▒▒███  ▒███ ▒██▒███ ▒██ ███     ███▒▒▒ ▒▒▒▒▒▒▒██▒▒▒▒▒▒██▒██ █▒██▒▒▒▒▒▒▒██  
+     ▒███  ▒███████▒███ ▒██▒███  ██▒███      ██████  ██  ▒██▒███████  ███ ▒██  
+     ▒███  ▒███▒▒██▒███ ▒██▒███ ▒██▒███     ▒██▒▒██ ▒██  ▒██▒███▒███ ▒███ ▒██  
+     ▒███  ▒███ ▒██▒▒█████ ▒▒██████▒▒██████ ▒██ ▒▒██▒▒█████ ▒██ ▒▒██ ▒██████   
+     ▒▒▒   ▒███ ▒▒  ▒▒▒▒▒   ▒▒▒▒▒▒  ▒▒▒▒▒▒  ▒▒   ▒▒  ▒▒▒▒▒  ▒▒   ▒▒  ▒▒▒▒▒▒    
+    ┌───── ▒▒▒  ───────────────────────────────────────────────────────────┐   
+    │                                                                      │   
+    │             Congrats! You just figured out the puzzle!               │   
+    │  If you were the first to solve it and alert us, you have just won   │   
+    │  a really beautiful custom Defcon Badge / Embedded lab! Lucky you!   │   
+    │                                                                      │   
+    │        Tweet a screenshot of this to @thugcrowd or email to          │   
+    │                         info@thugcrowd.com                           │   
+    │                                                                      │   
+    │    Badges will be available for pick up at Defcon. If you aren&#39;t     │   
+    │  attending Defcon, we can give the badge through alternative means!  │   
+    │                                                                      │   
+    │                       Thanks for playing!                            │   
+    │                                                                      │   
+    └──────────────────────────────────────────────────────────────────────┘   
+          Verification Hash: aHR0cHM6Ly90d2l0dGVyLmNvbS90aHVnY3Jvd2Q=
+</pre></div>
+	</div>
+
+	<div id="related-articles">
+		<a href="/2019/07/thugcrowd-elf-chat-challenge/" id="next-neighbour">&laquo; ThugCrowd ELF Chat Challenge</a>
+		<a href="/2018/04/thugcrowd-xor-chat-challenge/" id="prev-neighbour">ThugCrowd XOR Chat Challenge &raquo;</a>
+	</div>
+
+			<hr>
+		</article>
+
+		<footer>
+			<p>Powered by <a href="http://getpelican.com">Pelican</a>, <a href="https://github.com/iKevinY/pneumatic">Pneumatic</a> and <a href="http://pages.github.com">GitHub Pages</a>.</p>
+		</footer>
+	</div>
+
+
+</body>
+</html>
