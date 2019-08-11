@@ -1,5 +1,5 @@
 Title: ThugCrowd XOR Chat Challenge
-Date: 2018 04 04 18:00
+Date: 2018-04-04 18:00
 Keywords: thugcrowd, ctf, chat challenge, xor
 
 ## [ThugCrowd XOR Chat Challenge](https://twitter.com/thugcrowd/status/1113138128754225158), [Mirror](http://archive.fo/6GUyS):
