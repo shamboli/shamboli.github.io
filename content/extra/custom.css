@@ -1,0 +1,7 @@
+.post-content pre {
+	display: inline-block;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	-ms-word-break: break-all;
+	word-break: break-word;
+}
